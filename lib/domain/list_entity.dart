@@ -12,6 +12,7 @@ class ListEntity extends Entity {
 
   @override
   bool operator ==(Object other) {
+    if (identical(this, other)) return true;
     if (other is! ListEntity) return false;
     if (_data.length != other._data.length) return false;
     return !other.allEntities.any((element) => !allEntities.contains(element));

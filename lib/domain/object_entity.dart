@@ -17,6 +17,7 @@ class ObjectEntity extends Entity {
 
   @override
   bool operator ==(Object other) {
+    if (identical(this, other)) return true;
     if (other is! ObjectEntity) return false;
     if (_data.length != other._data.length) return false;
     return !allEntities.any((element) => !other.allEntities.contains(element));

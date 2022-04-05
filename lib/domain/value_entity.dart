@@ -9,7 +9,9 @@ class ValueEntity<ValueType> extends Entity {
 
   @override
   bool operator ==(Object other) {
-    if (other is! ValueEntity<ValueType>) return false;
+    if (identical(this, other)) return true;
+    if (other is! ValueEntity) return false;
+    if (other.data is! ValueType) return false;
     return other.data == data;
   }
 }

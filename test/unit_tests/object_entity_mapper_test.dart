@@ -1,5 +1,4 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:generic_repository/adapters/persistence/data_mappers/general_entity_mapper.dart';
 import 'package:generic_repository/adapters/persistence/data_mappers/object_entity_mapper.dart';
 import 'package:generic_repository/domain/entity.dart';
 import 'package:generic_repository/domain/object_entity.dart';
@@ -10,7 +9,7 @@ class ObjectEntityMapperTest {
   static void testObjectEntityMapper() {
     setUp(() {
       _objectEntityMapper =
-          ObjectEntityMapper(entityMapper: GeneralEntityMapper());
+          ObjectEntityMapper();
     });
     group('Object Entity Mapper Tests', () {
       _testEncoding();
