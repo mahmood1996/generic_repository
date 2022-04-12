@@ -1,10 +1,17 @@
 library generic_repository;
 
-export 'package:generic_repository/src/repository_interfaces/repository_operations/add.dart';
-export 'package:generic_repository/src/repository_interfaces/repository_operations/get.dart';
-export 'package:generic_repository/src/repository_interfaces/repository_operations/update.dart';
-export 'package:generic_repository/src/repository_interfaces/repository_operations/delete.dart';
-export 'package:generic_repository/src/repository_interfaces/base_repository.dart';
-export 'package:generic_repository/src/repository_interfaces/read_repository.dart';
+/// Repository ops paths
+export 'package:generic_repository/src/interfaces/repository/operations/add.dart';
+export 'package:generic_repository/src/interfaces/repository/operations/get.dart';
+export 'package:generic_repository/src/interfaces/repository/operations/update.dart';
+export 'package:generic_repository/src/interfaces/repository/operations/delete.dart';
 
-export 'package:generic_repository/src/spec/spec.dart';
+/// Repository paths
+export 'package:generic_repository/src/interfaces/repository/base_repository.dart';
+export 'package:generic_repository/src/interfaces/repository/read_repository.dart';
+
+/// Spec path
+export 'package:generic_repository/src/interfaces/spec/spec.dart';
+
+/// Implementation paths
+export 'package:generic_repository/src/implementations/read_repository_impl.dart';

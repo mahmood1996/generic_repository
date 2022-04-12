@@ -5,4 +5,4 @@ abstract class BaseRepository<EntityType>
         Add<EntityType>,
         Update<EntityType>,
         Delete<EntityType>,
-        Get<EntityType> {}
+        ReadRepository<EntityType> {}

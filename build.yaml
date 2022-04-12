@@ -1,0 +1,7 @@
+targets:
+  $default:
+    builders:
+      isar_library_generator:
+        options:
+          build_extensions:
+            '^lib/{{}}.dart': 'lib/generated/{{}}.g.dart'
