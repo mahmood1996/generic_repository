@@ -1,5 +1,7 @@
 library generic_repository;
 
+import 'package:generic_repository/generated/objectbox.g.dart';
+
 /// Repository ops paths
 export 'package:generic_repository/src/interfaces/repository/operations/add.dart';
 export 'package:generic_repository/src/interfaces/repository/operations/get.dart';
@@ -14,4 +16,8 @@ export 'package:generic_repository/src/interfaces/repository/read_repository.dar
 export 'package:generic_repository/src/interfaces/spec/spec.dart';
 
 /// Implementation paths
-export 'package:generic_repository/src/implementations/read_repository_impl.dart';
+
+void main() {
+  /// note.id.greaterThan(5).or(note.id.equals(5))
+  /// Note_.id.greaterThan(5).or(Note_.id.equals(5));
+}
