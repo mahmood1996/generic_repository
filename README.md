@@ -15,4 +15,5 @@ and the Flutter guide for
 
 ## Features
 
-Abstractions for Repository Pattern with Spec pattern support.
+Abstractions for Repository Pattern with Spec pattern support. it can be used as start point for generic 
+repositories with hive, Isar, ObjectBox .... etc
