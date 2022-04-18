@@ -11,8 +11,6 @@ dependencies:
   flutter:
     sdk: flutter
   mockito: any
-  isar: any
-  isar_flutter_libs: any
 
 dev_dependencies:
   flutter_test:
