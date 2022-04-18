@@ -1,5 +1,5 @@
 name: generic_repository
-description: A new Flutter project.
+description: Abstractions for Repository Pattern with Spec pattern support
 version: 0.0.1
 homepage: https://github.com/mahmood1996/generic_repository.git
 
@@ -10,9 +10,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  mockito: any
-  objectbox: ^1.4.1
-  objectbox_flutter_libs: any
 
 dev_dependencies:
   flutter_test:
