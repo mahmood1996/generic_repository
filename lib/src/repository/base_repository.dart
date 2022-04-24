@@ -1,8 +1,8 @@
 import 'package:generic_repository/generic_repository.dart';
 
-abstract class BaseRepository<EntityId>
+abstract class BaseRepository<EntityType extends Entity>
     implements
-        Add<Entity<EntityId>>,
-        Update<Entity<EntityId>>,
-        Delete<Entity<EntityId>>,
-        ReadRepository<EntityId> {}
+        Add<EntityType>,
+        Update<EntityType>,
+        Delete<EntityType>,
+        ReadRepository<EntityType> {}
