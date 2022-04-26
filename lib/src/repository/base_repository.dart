@@ -1,6 +1,6 @@
 import 'package:generic_repository/generic_repository.dart';
 
-abstract class BaseRepository<EntityType extends Entity>
+abstract class BaseRepository<EntityType>
     implements
         Add<EntityType>,
         Update<EntityType>,

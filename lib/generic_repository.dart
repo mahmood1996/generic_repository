@@ -12,6 +12,3 @@ export 'package:generic_repository/src/repository/read_repository.dart';
 
 /// Spec path
 export 'package:generic_repository/src/spec/spec.dart';
-
-/// Entity path
-export 'package:generic_repository/src/entity/entity.dart';
