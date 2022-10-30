@@ -1,7 +1,7 @@
-name: generic_repository
+name: generic_repository.dart
 description: Abstractions for Repository Pattern with Spec pattern support
 version: 0.0.1
-homepage: https://github.com/mahmood1996/generic_repository.git
+homepage: https://github.com/mahmood1996/generic_repository.dart.git
 publish_to: none
 
 environment:
@@ -9,6 +9,7 @@ environment:
   flutter: ">=1.17.0"
 
 dependencies:
+  dartz: ^0.10.1
   flutter:
     sdk: flutter
 
@@ -16,6 +17,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^1.0.0
+  mockito: any
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
