@@ -15,5 +15,6 @@ and the Flutter guide for
 
 ## Features
 
-Abstractions for Repository Pattern with Spec pattern support. it can be used as start point for generic
-repositories like Hive, Isar, ObjectBox .... etc
+
+This package reduces your time by providing an implementation to Repository Pattern and 
+also support customization with set of abstractions for Repository and DataSources
