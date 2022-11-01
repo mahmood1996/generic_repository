@@ -12,9 +12,7 @@ void main() {
     appConnectivity = MockAppConnectivity();
     remoteDataSource = MockRemoteDataSource();
     repository = RepositoryWithoutCachingImpl(
-      appConnectivity: appConnectivity,
-      remoteDataSource: remoteDataSource
-    );
+        appConnectivity: appConnectivity, remoteDataSource: remoteDataSource);
   });
 
   void _makeAppOffline() {
