@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:mockito/mockito.dart';
+import 'package:mocktail/mocktail.dart';
 import 'package:generic_repository/generic_repository.dart';
 
 void main() {
@@ -16,11 +16,11 @@ void main() {
   });
 
   void _makeAppOffline() {
-    when(appConnectivity.isOnline).thenAnswer((_) => Future.value(false));
+    when(() => appConnectivity.isOnline).thenAnswer((_) => Future.value(false));
   }
 
   void _makeAppOnline() {
-    when(appConnectivity.isOnline).thenAnswer((_) => Future.value(true));
+    when(() => appConnectivity.isOnline).thenAnswer((_) => Future.value(true));
   }
 
   group('Repository without caching', () {
@@ -43,7 +43,7 @@ void main() {
         _makeAppOnline();
         var expectedEntities = [Entity(id: 0), Entity(id: 1), Entity(id: 2)];
         Params params = const NullParams();
-        when(remoteDataSource.getAll(params))
+        when(() => remoteDataSource.getAll(params))
             .thenAnswer((_) async => expectedEntities);
 
         Either<Failure, List<Entity>> result = await repository.getAll(params);
@@ -56,7 +56,7 @@ void main() {
         _makeAppOnline();
         var message = 'fake message from server';
 
-        when(remoteDataSource.getAll())
+        when(() => remoteDataSource.getAll())
             .thenThrow(ServerException(message: message));
 
         Either<Failure, List<Entity>> result = await repository.getAll();
@@ -69,7 +69,7 @@ void main() {
         _makeAppOnline();
         var message = 'fake message from server';
 
-        when(remoteDataSource.getAll())
+        when(() => remoteDataSource.getAll())
             .thenThrow(UnauthorizedAccessException(message: message));
 
         Either<Failure, List<Entity>> result = await repository.getAll();
@@ -90,7 +90,7 @@ void main() {
         int anyId = 0;
         var expectedEntity = Entity(id: anyId);
 
-        when(remoteDataSource.getById(anyId))
+        when(() => remoteDataSource.getById(anyId))
             .thenAnswer((_) => Future.value(expectedEntity));
 
         Either<Failure, Entity> result = await repository.getById(anyId);
@@ -103,7 +103,7 @@ void main() {
         _makeAppOnline();
         var message = 'fake message from server';
         int anyId = 0;
-        when(remoteDataSource.getById(anyId))
+        when(() => remoteDataSource.getById(anyId))
             .thenThrow(ServerException(message: message));
 
         var result = await repository.getById(anyId);
@@ -116,7 +116,7 @@ void main() {
         _makeAppOnline();
         var message = 'fake message from server';
         int anyId = 0;
-        when(remoteDataSource.getById(anyId))
+        when(() => remoteDataSource.getById(anyId))
             .thenThrow(UnauthorizedAccessException(message: message));
 
         var result = await repository.getById(anyId);
